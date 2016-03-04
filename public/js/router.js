@@ -4,6 +4,7 @@ function ($, _, Backbone, DefaultView) {
     routes: {
       'about': 'aboutAction',
       'contact': 'contactAction',
+      '4thlink': '4thlinkAction',
       '*other': 'defaultAction'
     }
   });
@@ -19,6 +20,9 @@ function ($, _, Backbone, DefaultView) {
     siteRouter.on('route:contactAction', function(){
       defaultView.render('contact');
     });
+    siteRouter.on('route:contactAction', function(){
+  defaultView.render('4thlink');
+});
     Backbone.history.start();
   };
   return {
