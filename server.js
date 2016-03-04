@@ -25,9 +25,9 @@ app.get('/pages', function (req, res) {
 
 app.post('/pages', function (req, res) {
   var stm = db.run("INSERT INTO pages (title, image, content) VALUES ($title, $image, $content)", {
-    $title: '111',
-    $image: 'https://source.unsplash.com/random/800x600',
-    $content: 'content'
+    $title: req.body.title,
+    $image: req.body.image,
+    $content: req.body.content
   });
   res.json(stm);
 });
