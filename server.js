@@ -4,6 +4,10 @@ var file = 'data.db';
 var sqlite = require('sqlite3');
 var app = express();
 var db = new sqlite.Database(file);
+var bodyParser = require('body-parser');
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 app.use(express.static('public'));
 
