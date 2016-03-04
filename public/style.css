@@ -1,6 +1,10 @@
 * {
   box-sizing: border-box;
 }
+main{
+  display: flex;
+  flex-wrap: wrap;
+}
 
 body {
   margin: 0;
