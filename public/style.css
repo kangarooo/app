@@ -1,15 +1,71 @@
-.menu .menu--items .menu--item {
-
+* {
+  box-sizing: border-box;
 }
 
-.menu--items {
+body {
   margin: 0;
   padding: 0;
-  list-style-type: none;
-  background: #ccc;
+  font-family: sans-serif;
+  background: #eee;
+  color: #333;
 }
 
-.menu--item {
-  margin: 10px;
-  display: inline-block;
+.page {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+.page-title {
+  margin: 10px 0;
+}
+
+.page-title a {
+  text-decoration: none;
+  color: #333;
+}
+
+.page-image {
+  margin: 0 10px 10px 0;
+  float: left;
+  width: 50%;
+}
+
+.page-intro {
+  margin: 5px 0;
+}
+
+.footer {
+  clear: both;
+}
+
+@media all and (max-width: 640px) {
+  .page {
+    padding: 0;
+    margin: 10px;
+    position: relative;
+    width: 100%;
+  }
+
+  .page-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 10px 0;
+  }
+
+  .page-title a {
+    color: #fff;
+  }
+
+  .page-image {
+    margin: 0;
+    width: 100%;
+  }
+
+  .page-intro {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
 }
