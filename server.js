@@ -19,6 +19,10 @@ app.get('/pages', function (req, res) {
   });
 });
 
+app.post('/pages', function (req, res) {
+  res.json({message: "This is post!"});
+});
+
 app.get('/pages/:id', function (req, res) {
   db.serialize(function() {
     db.get('SELECT * FROM pages WHERE id = ' + req.params.id, function(err, all) {
